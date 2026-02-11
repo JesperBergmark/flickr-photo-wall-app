@@ -7,7 +7,7 @@ interface PhotoCardProps {
   index: number;
 }
 
-export const PhotoCard = forwardRef<HTMLDivElement, PhotoCardProps>(({ photo, index }, ref) => {
+export const PhotoCardMolecule = forwardRef<HTMLDivElement, PhotoCardProps>(({ photo, index }, ref) => {
   const cleanTitle = photo.title || 'Untitled';
 
   return (
@@ -44,4 +44,4 @@ export const PhotoCard = forwardRef<HTMLDivElement, PhotoCardProps>(({ photo, in
   );
 });
 
-PhotoCard.displayName = 'PhotoCard';
+PhotoCardMolecule.displayName = 'PhotoCardMolecule';

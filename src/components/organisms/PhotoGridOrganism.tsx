@@ -1,13 +1,13 @@
 import { AnimatePresence } from 'framer-motion';
-import { PhotoCard } from '@/components/molecules/PhotoCard';
-import { LoadingSpinner } from '@/components/molecules/LoadingSpinner';
+import { PhotoCardMolecule } from '@/components/molecules/PhotoCardMolecule';
+import { LoadingSpinnerMolecule } from '@/components/molecules/LoadingSpinnerMolecule';
 import { useFlickrPhotos } from '@/hooks/useFlickrPhotos';
 
-export const PhotoGrid = () => {
+export const PhotoGridOrganism = () => {
   const { data, isLoading, isError, error } = useFlickrPhotos();
 
   if (isLoading) {
-    return <LoadingSpinner />;
+    return <LoadingSpinnerMolecule />;
   }
 
   if (isError) {
@@ -30,7 +30,7 @@ export const PhotoGrid = () => {
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
       <AnimatePresence mode="popLayout">
         {data.items.map((photo, index) => (
-          <PhotoCard key={`${photo.link}-${photo.published}`} photo={photo} index={index} />
+          <PhotoCardMolecule key={`${photo.link}-${photo.published}`} photo={photo} index={index} />
         ))}
       </AnimatePresence>
     </div>

@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MainLayout } from '@/components/templates/MainLayout';
-import { PhotoGrid } from '@/components/organisms/PhotoGrid';
+import { MainLayoutTemplate } from '@/components/templates/MainLayoutTemplate';
+import { PhotoGridOrganism } from '@/components/organisms/PhotoGridOrganism';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -14,9 +14,9 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <MainLayout>
-        <PhotoGrid />
-      </MainLayout>
+      <MainLayoutTemplate>
+        <PhotoGridOrganism />
+      </MainLayoutTemplate>
     </QueryClientProvider>
   );
 }

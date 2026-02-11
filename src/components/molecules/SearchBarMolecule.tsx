@@ -1,9 +1,9 @@
 import { useState, FormEvent } from 'react';
-import { Input } from '@/components/atoms/Input';
-import { Button } from '@/components/atoms/Button';
+import { InputAtom } from '@/components/atoms/InputAtom';
+import { ButtonAtom } from '@/components/atoms/ButtonAtom';
 import { usePhotoWallStore } from '@/store/photoWallStore';
 
-export const SearchBar = () => {
+export const SearchBarMolecule = () => {
   const { searchTags, setSearchTags } = usePhotoWallStore();
   const [inputValue, setInputValue] = useState(searchTags);
 
@@ -16,16 +16,16 @@ export const SearchBar = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full max-w-2xl">
-      <Input
+      <InputAtom
         type="text"
         placeholder="Sök taggar (t.ex. nature, sunset)..."
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         className="flex-1"
       />
-      <Button type="submit" className="w-full sm:w-auto">
+      <ButtonAtom type="submit" className="w-full sm:w-auto">
         Sök
-      </Button>
+      </ButtonAtom>
     </form>
   );
 };

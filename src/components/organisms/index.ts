@@ -1,2 +1,2 @@
-export { PhotoGrid } from './PhotoGrid';
-export { Header } from './Header';
+export { PhotoGridOrganism } from './PhotoGridOrganism';
+export { HeaderOrganism } from './HeaderOrganism';
