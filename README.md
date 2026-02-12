@@ -18,9 +18,8 @@ En responsiv webbapplikation som visar en fotovägg med bilder från Flickrs pub
 - **TypeScript** - Typsäkerhet
 - **Vite** - Build tool och dev server
 
-### State Management & Data Fetching
+### Data Fetching
 
-- **Zustand** - Lättviktig state management
 - **TanStack Query (React Query)** - Data fetching med cachning och automatisk uppdatering
 
 ### Styling & Animation
@@ -35,22 +34,7 @@ En responsiv webbapplikation som visar en fotovägg med bilder från Flickrs pub
 
 ## Projektstruktur
 
-Projektet följer **Atomic Design** metodologi:
-
-```
-src/
-├── components/
-│   ├── atoms/          # Grundläggande UI-komponenter (Button, Input)
-│   ├── molecules/      # Sammansatta komponenter (SearchBar, PhotoCard)
-│   ├── organisms/      # Komplexa komponenter (PhotoGrid, Header)
-│   └── templates/      # Layoutmallar (MainLayout)
-├── hooks/              # Custom React hooks
-├── services/           # API-kommunikation
-├── store/              # Zustand state management
-├── types/              # TypeScript types och interfaces
-├── utils/              # Utility-funktioner
-└── styles/             # Globala styles
-```
+Projektet följer **Atomic Design** metodologi
 
 ## Installation och Setup
 
@@ -106,15 +90,6 @@ Projektet använder Atomic Design för att skapa en modulär och skalbar kompone
 - **Molecules**: Enklare sammansatta komponenter (SearchBar, PhotoCard)
 - **Organisms**: Komplexa sektioner (PhotoGrid, Header)
 - **Templates**: Sidlayouter (MainLayout)
-
-### State Management
-
-**Zustand** valdes för state management eftersom:
-
-- Minimal boilerplate jämfört med Redux
-- Enkel att testa och underhålla
-- Perfekt för mindre till medelstora applikationer
-- Bra TypeScript-support
 
 ### Data Fetching
 
@@ -173,7 +148,7 @@ Projektet är strukturerat för enkel vidareutveckling:
 3. **Fullskärmsläge**: Lägg till en fullscreen viewer för enskilda bilder
 4. **Tema**: Dark/light mode toggle
 5. **Inställningar**: Anpassningsbar uppdateringsfrekvens
-6. **Delning**: Social media sharing funktionalitet
+6. **Delning**: Delning av social media
 7. **Offline support**: PWA funktionalitet
 
 ## Testing
