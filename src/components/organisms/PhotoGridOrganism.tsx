@@ -1,5 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
-import { PhotoCardMolecule, LoadingSpinnerMolecule } from '../molecules';
+import { PhotoCardMolecule } from '../molecules';
+import { LoadingSpinnerAtom } from '../atoms';
 import { FlickrPhoto } from '@/types';
 
 interface PhotoGridOrganismProps {
@@ -11,7 +12,7 @@ interface PhotoGridOrganismProps {
 
 export const PhotoGridOrganism = ({ photos, isLoading, isError, error }: PhotoGridOrganismProps) => {
   if (isLoading) {
-    return <LoadingSpinnerMolecule />;
+    return <LoadingSpinnerAtom />;
   }
 
   if (isError) {

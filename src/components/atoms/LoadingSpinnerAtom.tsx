@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export const LoadingSpinnerMolecule = () => {
+export const LoadingSpinnerAtom = () => {
   return (
     <div className="flex items-center justify-center py-12">
       <motion.div
