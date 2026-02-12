@@ -1,16 +1,19 @@
 import { useState, FormEvent } from 'react';
 import { InputAtom } from '@/components/atoms/InputAtom';
 import { ButtonAtom } from '@/components/atoms/ButtonAtom';
-import { usePhotoWallStore } from '@/store/photoWallStore';
 
-export const SearchBarMolecule = () => {
-  const { searchTags, setSearchTags } = usePhotoWallStore();
-  const [inputValue, setInputValue] = useState(searchTags);
+interface SearchBarMoleculeProps {
+  onSearch: (tags: string) => void;
+  defaultValue?: string;
+}
+
+export const SearchBarMolecule = ({ onSearch, defaultValue = 'nature' }: SearchBarMoleculeProps) => {
+  const [inputValue, setInputValue] = useState(defaultValue);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (inputValue.trim()) {
-      setSearchTags(inputValue.trim());
+      onSearch(inputValue.trim());
     }
   };
 

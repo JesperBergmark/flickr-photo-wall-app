@@ -1,23 +1,17 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useState } from 'react';
 import { MainLayoutTemplate } from '@/components/templates/MainLayoutTemplate';
 import { PhotoGridOrganism } from '@/components/organisms/PhotoGridOrganism';
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: 2,
-      refetchOnWindowFocus: false,
-    },
-  },
-});
+import { HeaderOrganism } from '@/components/organisms/HeaderOrganism';
+import { useFlickrPhotos } from '@/hooks/useFlickrPhotos';
 
 function App() {
+  const [searchTags, setSearchTags] = useState('nature');
+  const { data, isLoading, isError, error } = useFlickrPhotos(searchTags);
+
   return (
-    <QueryClientProvider client={queryClient}>
-      <MainLayoutTemplate>
-        <PhotoGridOrganism />
-      </MainLayoutTemplate>
-    </QueryClientProvider>
+    <MainLayoutTemplate header={<HeaderOrganism onSearch={setSearchTags} />}>
+      <PhotoGridOrganism photos={data?.items || []} isLoading={isLoading} isError={isError} error={error?.message} />
+    </MainLayoutTemplate>
   );
 }
 
