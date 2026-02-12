@@ -1,6 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { InputAtom } from '@/components/atoms/InputAtom';
-import { ButtonAtom } from '@/components/atoms/ButtonAtom';
+import { InputAtom, ButtonAtom } from '../atoms';
 
 interface SearchBarMoleculeProps {
   onSearch: (tags: string) => void;

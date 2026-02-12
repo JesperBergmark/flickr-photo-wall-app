@@ -1,6 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
-import { PhotoCardMolecule } from '@/components/molecules/PhotoCardMolecule';
-import { LoadingSpinnerMolecule } from '@/components/molecules/LoadingSpinnerMolecule';
+import { PhotoCardMolecule, LoadingSpinnerMolecule } from '../molecules';
 import { FlickrPhoto } from '@/types';
 
 interface PhotoGridOrganismProps {

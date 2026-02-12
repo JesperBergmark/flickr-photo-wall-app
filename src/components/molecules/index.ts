@@ -1,3 +1,3 @@
 export { PhotoCardMolecule } from './PhotoCardMolecule';
-export { SearchBar } from './SearchBarMolecule';
+export { SearchBarMolecule } from './SearchBarMolecule';
 export { LoadingSpinnerMolecule } from './LoadingSpinnerMolecule';

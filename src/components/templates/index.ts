@@ -1,0 +1,1 @@
+export { MainLayoutTemplate } from './MainLayoutTemplate';

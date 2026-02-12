@@ -1,5 +1,5 @@
-import { SearchBarMolecule } from '@/components/molecules/SearchBarMolecule';
-import { HeaderAtom } from '@/components/atoms/HeaderAtom';
+import { SearchBarMolecule } from '../molecules';
+import { HeaderAtom } from '../atoms';
 
 interface HeaderOrganismProps {
   onSearch: (tags: string) => void;

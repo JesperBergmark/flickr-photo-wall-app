@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { MainLayoutTemplate } from '@/components/templates/MainLayoutTemplate';
-import { PhotoGridOrganism } from '@/components/organisms/PhotoGridOrganism';
-import { HeaderOrganism } from '@/components/organisms/HeaderOrganism';
+import { MainLayoutTemplate } from './components/templates';
+import { PhotoGridOrganism, HeaderOrganism } from './components/organisms';
 import { useFlickrPhotos } from '@/hooks/useFlickrPhotos';
 
 function App() {
