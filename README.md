@@ -54,10 +54,10 @@ npm run preview
 
 Projektet följer **Atomic Design**:
 
-- **Atoms** - Grundläggande komponenter (Button, Input, LoadingSpinner)
-- **Molecules** - Sammansatta komponenter (SearchBar, PhotoCard)
-- **Organisms** - Komplexa sektioner (PhotoGrid, Header)
-- **Templates** - Sidlayouter (MainLayout)
+- **Atoms** - Grundläggande komponenter (ButtonAtom, InputAtom, LoadingSpinnerAtom, HeaderAtom)
+- **Molecules** - Sammansatta komponenter (SearchBarMolecule, PhotoCardMolecule)
+- **Organisms** - Komplexa sektioner (PhotoGridOrganism, HeaderOrganism)
+- **Templates** - Sidlayouter (MainLayoutTemplate)
 
 State hanteras med `useState` och data-fetching med TanStack Query.
 
