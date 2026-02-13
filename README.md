@@ -111,7 +111,7 @@ Projektet använder Atomic Design för att skapa en modulär och skalbar kompone
 
 ## Automatisk Uppdatering
 
-Applikationen använder React Query's `refetchInterval` för att automatiskt hämta nya foton var 10:e sekund. Detta kan konfigureras i `src/store/photoWallStore.ts`.
+Applikationen använder React Query's `refetchInterval` för att automatiskt hämta nya foton var 10:e sekund. Detta kan konfigureras i `src/hooks/useFlickrPhotos.ts`.
 
 ## Responsiv Design
 

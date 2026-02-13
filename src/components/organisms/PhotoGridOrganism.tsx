@@ -32,7 +32,7 @@ export const PhotoGridOrganism = ({ photos, isLoading, isError, error }: PhotoGr
   }
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 md:gap-4">
       <AnimatePresence mode="popLayout">
         {photos.map((photo, index) => (
           <PhotoCardMolecule key={`${photo.link}-${photo.published}`} photo={photo} index={index} />
